@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14342DE9-472D-41A9-8AD1-42D5340C1A0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RyotianEd</RootNamespace>
+    <AssemblyName>RyotianEd</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <StartupObject>RyotianEd.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddParameterForm.Designer.cs">
+      <DependentUpon>AddParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassDescriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDescriptionForm.Designer.cs">
+      <DependentUpon>ClassDescriptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSelectionForm.Designer.cs">
+      <DependentUpon>ClassSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseConnectForm.Designer.cs">
+      <DependentUpon>DatabaseConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseObject.cs" />
+    <Compile Include="Editor.cs" />
+    <Compile Include="EntityEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntityEditorForm.Designer.cs">
+      <DependentUpon>EntityEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GodzClassInfo.cs" />
+    <Compile Include="HashConverterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HashConverterForm.Designer.cs">
+      <DependentUpon>HashConverterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm1.Designer.cs">
+      <DependentUpon>MainForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialBrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialBrowserForm.Designer.cs">
+      <DependentUpon>MaterialBrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewLayer.Designer.cs">
+      <DependentUpon>NewLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPackageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPackageForm.Designer.cs">
+      <DependentUpon>NewPackageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenLayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenLayerForm.Designer.cs">
+      <DependentUpon>OpenLayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddParameterForm.resx">
+      <DependentUpon>AddParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDescriptionForm.resx">
+      <DependentUpon>ClassDescriptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSelectionForm.resx">
+      <DependentUpon>ClassSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseConnectForm.resx">
+      <DependentUpon>DatabaseConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntityEditorForm.resx">
+      <DependentUpon>EntityEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HashConverterForm.resx">
+      <DependentUpon>HashConverterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm1.resx">
+      <DependentUpon>MainForm1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialBrowserForm.resx">
+      <DependentUpon>MaterialBrowserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewLayer.resx">
+      <DependentUpon>NewLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPackageForm.resx">
+      <DependentUpon>NewPackageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenLayerForm.resx">
+      <DependentUpon>OpenLayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResolveConflictForm.resx">
+      <DependentUpon>ResolveConflictForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateEditorForm.resx">
+      <DependentUpon>TemplateEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm1.resx">
+      <DependentUpon>TestForm1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkOfflineConfirmationForm.resx">
+      <DependentUpon>WorkOfflineConfirmationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorldEditorForm.resx">
+      <DependentUpon>WorldEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PropertyEditors.cs" />
+    <Compile Include="ResolveConflictForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResolveConflictForm.Designer.cs">
+      <DependentUpon>ResolveConflictForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabPanelData.cs" />
+    <Compile Include="TemplateEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemplateEditorForm.Designer.cs">
+      <DependentUpon>TemplateEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm1.Designer.cs">
+      <DependentUpon>TestForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkOfflineConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkOfflineConfirmationForm.Designer.cs">
+      <DependentUpon>WorkOfflineConfirmationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorldEditor.cs" />
+    <Compile Include="WorldEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorldEditorForm.Designer.cs">
+      <DependentUpon>WorldEditorForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GodzGlue\GodzGlue.vcxproj">
+      <Project>{9de828f3-3050-436f-a05e-96351f9df414}</Project>
+      <Name>GodzGlue</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
