@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final|Win32">
+      <Configuration>Final</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|Win32">
+      <Configuration>Profile</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals" />
+  <PropertyGroup Label="Globals">
+    <ProjectName>GodzEngine</ProjectName>
+    <ProjectGuid>{B70EE78E-D57C-46C4-A9C2-81F04904B0C2}</ProjectGuid>
+    <RootNamespace>GodzEngine</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50214.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <TargetName>GodzEngine_Debug</TargetName>
+    <TargetExt>.dll</TargetExt>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\</OutDir>
+    <IntDir>Release\</IntDir>
+    <TargetName>GodzEngine_Release</TargetName>
+    <TargetExt>.dll</TargetExt>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <OutDir>..\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <TargetName>GodzEngine</TargetName>
+    <TargetExt>.dll</TargetExt>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <OutDir>..\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <TargetName>GodzEngine</TargetName>
+    <TargetExt>.dll</TargetExt>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../;../Bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;GODZEXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>BulletCollision.lib;LinearMath.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../Bullet/Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)CoreFramework.pdb</ProgramDatabaseFile>
+      <MapFileName />
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(OutDir)GodzEngine_Debug.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../;../Bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;GODZEXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>BulletCollision.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../Bullet/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(OutDir)GodzEngine_Release.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../;../Bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_FINAL;WIN32;NDEBUG;_WINDOWS;_USRDLL;GODZEXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>BulletCollision.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../Bullet/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>false</GenerateMapFile>
+      <MapFileName />
+      <MapExports>false</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(OutDir)GodzEngine.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../;../Bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;GODZEXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>true</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>BulletCollision.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../Bullet/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(OutDir)GodzEngine.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\atomic_ref.cpp" />
+    <ClCompile Include="Core\EntityComponent.cpp" />
+    <ClCompile Include="Core\RenderDeviceObject.cpp" />
+    <ClCompile Include="Core\RenderList.cpp" />
+    <ClCompile Include="Core\SlotIndex.cpp" />
+    <ClCompile Include="Core\VisualComponent.cpp" />
+    <ClCompile Include="Gameplay\AssetStreamEntityComponent.cpp" />
+    <ClCompile Include="Gameplay\Bot.cpp" />
+    <ClCompile Include="Gameplay\CharacterTemplate.cpp" />
+    <ClCompile Include="Gameplay\MBot.cpp" />
+    <ClCompile Include="Gameplay\MTActorComponent.cpp" />
+    <ClCompile Include="Gameplay\PathFinder.cpp" />
+    <ClCompile Include="Gameplay\PhysicsEntityComponent.cpp" />
+    <ClCompile Include="Gameplay\Projectile.cpp" />
+    <ClCompile Include="Gameplay\ProjectileTrigger.cpp" />
+    <ClCompile Include="Gameplay\SpawnPoint.cpp" />
+    <ClCompile Include="Gameplay\Waypoint.cpp" />
+    <ClCompile Include="Gameplay\WCharacter.cpp" />
+    <ClCompile Include="Gameplay\WController.cpp" />
+    <ClCompile Include="Gameplay\WPlayerController.cpp" />
+    <ClCompile Include="Math\IntersectionAxis.cpp" />
+    <ClCompile Include="Math\EulerAngleConverter.cpp" />
+    <ClCompile Include="Math\OBBox.cpp" />
+    <ClCompile Include="Math\Quaternion.cpp" />
+    <ClCompile Include="Math\Vector3.cpp" />
+    <ClCompile Include="Math\vectormath.cpp" />
+    <ClCompile Include="Math\ViewFrustum.cpp" />
+    <ClCompile Include="Math\WBox.cpp" />
+    <ClCompile Include="Math\WGeometry.cpp" />
+    <ClCompile Include="Math\WMatrix.cpp" />
+    <ClCompile Include="Math\WMatrixUtil.cpp" />
+    <ClCompile Include="Math\WPlane.cpp" />
+    <ClCompile Include="Math\WSphere.cpp" />
+    <ClCompile Include="HUD\HUD.cpp" />
+    <ClCompile Include="HUD\Widget.cpp" />
+    <ClCompile Include="HUD\WidgetInfo.cpp" />
+    <ClCompile Include="ozlib\dist_pointline.cpp" />
+    <ClCompile Include="ozlib\intr_lineline.cpp" />
+    <ClCompile Include="ozlib\intr_sphereline.cpp" />
+    <ClCompile Include="ozlib\intr_spheretri.cpp" />
+    <ClCompile Include="ozlib\intr_tripoint.cpp" />
+    <ClCompile Include="ozlib\plane.cpp" />
+    <ClCompile Include="Graphics\DebugRenderer.cpp" />
+    <ClCompile Include="Graphics\RendererHelper.cpp" />
+    <ClCompile Include="PlayerSkills\PlayerSkill_Body.cpp" />
+    <ClCompile Include="PlayerSkills\SkillDatabase.cpp" />
+    <ClCompile Include="Core\ClassRegistry.cpp" />
+    <ClCompile Include="Core\CoreClasses.cpp" />
+    <ClCompile Include="Core\crc32.cpp" />
+    <ClCompile Include="Core\debug.cpp" />
+    <ClCompile Include="Core\FPSCounter.cpp" />
+    <ClCompile Include="Core\GDZArchive.cpp" />
+    <ClCompile Include="Core\GenericNode.cpp" />
+    <ClCompile Include="Core\GenericObjData.cpp" />
+    <ClCompile Include="Core\GenericObject.cpp" />
+    <ClCompile Include="Core\GenericObjectList.cpp" />
+    <ClCompile Include="Core\GenericPackage.cpp" />
+    <ClCompile Include="Core\GenericReferenceCounter.cpp" />
+    <ClCompile Include="Core\GenericSingleton.cpp" />
+    <ClCompile Include="Core\GeometryInfo.cpp" />
+    <ClCompile Include="Core\GizmoAxis.cpp" />
+    <ClCompile Include="Core\Godz.cpp" />
+    <ClCompile Include="Core\GodzAssert.cpp" />
+    <ClCompile Include="Core\GodzAtomics.cpp" />
+    <ClCompile Include="Core\GodzEngine.cpp" />
+    <ClCompile Include="Core\GodzUtil.cpp" />
+    <ClCompile Include="Core\GSAFileImporter.cpp" />
+    <ClCompile Include="Core\HeapUnit.cpp" />
+    <ClCompile Include="Core\HString.cpp" />
+    <ClCompile Include="Core\HStringTable.cpp" />
+    <ClCompile Include="Core\IDriver.cpp" />
+    <ClCompile Include="Core\IGenericConfig.cpp" />
+    <ClCompile Include="Core\InputSystem.cpp" />
+    <ClCompile Include="Core\Job.cpp" />
+    <ClCompile Include="Core\JobManager.cpp" />
+    <ClCompile Include="Core\JobThread.cpp" />
+    <ClCompile Include="Core\Layer.cpp" />
+    <ClCompile Include="Core\LevelNode.cpp" />
+    <ClCompile Include="Core\Lightmap.cpp" />
+    <ClCompile Include="Core\Logger.cpp" />
+    <ClCompile Include="Core\Material.cpp" />
+    <ClCompile Include="Core\MaterialInfo.cpp" />
+    <ClCompile Include="Core\MemoryMngr.cpp" />
+    <ClCompile Include="Core\Mesh.cpp" />
+    <ClCompile Include="Core\MeshImporter.cpp" />
+    <ClCompile Include="Core\MeshInstance.cpp" />
+    <ClCompile Include="Core\mmgr.cpp" />
+    <ClCompile Include="Core\ModelResource.cpp" />
+    <ClCompile Include="Core\NavigationMesh.cpp" />
+    <ClCompile Include="Core\NavMeshInfo.cpp" />
+    <ClCompile Include="Core\ObjectStateChangeEvent.cpp" />
+    <ClCompile Include="Core\OctreeSceneNode.cpp" />
+    <ClCompile Include="Core\PackageList.cpp" />
+    <ClCompile Include="Core\PerformanceTracker.cpp" />
+    <ClCompile Include="Core\PlayerSkill.cpp" />
+    <ClCompile Include="Core\RenderData.cpp" />
+    <ClCompile Include="Core\RenderDeviceEvent.cpp" />
+    <ClCompile Include="Core\Renderer.cpp" />
+    <ClCompile Include="Core\RenderOptions.cpp" />
+    <ClCompile Include="Core\RenderQueue.cpp" />
+    <ClCompile Include="Core\ResourceFactory.cpp" />
+    <ClCompile Include="Core\ResourceManager.cpp" />
+    <ClCompile Include="Core\ResourceObject.cpp" />
+    <ClCompile Include="Core\RString.cpp" />
+    <ClCompile Include="Core\SceneData.cpp" />
+    <ClCompile Include="Core\SceneManager.cpp" />
+    <ClCompile Include="Core\SceneNode.cpp" />
+    <ClCompile Include="Core\ShaderLoader.cpp" />
+    <ClCompile Include="Core\ShaderManager.cpp" />
+    <ClCompile Include="Core\ShaderResource.cpp" />
+    <ClCompile Include="Core\ShadowMapManager.cpp" />
+    <ClCompile Include="Core\SkeletalMesh.cpp" />
+    <ClCompile Include="Core\SkelMeshInstance.cpp" />
+    <ClCompile Include="Core\StringBuffer.cpp" />
+    <ClCompile Include="Core\StringTokenizer.cpp" />
+    <ClCompile Include="Core\TextureResource.cpp" />
+    <ClCompile Include="Core\Timer.cpp" />
+    <ClCompile Include="Core\VertexTypes.cpp" />
+    <ClCompile Include="Core\ViewportInterface.cpp" />
+    <ClCompile Include="Core\Win32Interface.cpp" />
+    <ClCompile Include="Core\WindowManager.cpp" />
+    <ClCompile Include="Core\EntityEvents.cpp" />
+    <ClCompile Include="Core\EntityTemplate.cpp" />
+    <ClCompile Include="Core\MActor.cpp" />
+    <ClCompile Include="Core\ObjectTemplate.cpp" />
+    <ClCompile Include="Core\WCamera.cpp" />
+    <ClCompile Include="Core\WDynamicLight.cpp" />
+    <ClCompile Include="Core\WEntity.cpp" />
+    <ClCompile Include="Core\WPhysicsVolume.cpp" />
+    <ClCompile Include="Core\WPointLight.cpp" />
+    <ClCompile Include="Core\WShadowPointLight.cpp" />
+    <ClCompile Include="Core\WShadowSpotLight.cpp" />
+    <ClCompile Include="Core\WSkyDome.cpp" />
+    <ClCompile Include="Core\WSpotLight.cpp" />
+    <ClCompile Include="Core\WSunLight.cpp" />
+    <ClCompile Include="Core\AsyncFileLoader.cpp" />
+    <ClCompile Include="Core\AsyncFileObserver.cpp" />
+    <ClCompile Include="Core\FileReader.cpp" />
+    <ClCompile Include="Core\FileWriter.cpp" />
+    <ClCompile Include="Core\Name.cpp" />
+    <ClCompile Include="Core\NameTable.cpp" />
+    <ClCompile Include="Core\PackageReader.cpp" />
+    <ClCompile Include="Core\PackageWriter.cpp" />
+    <ClCompile Include="Core\SerializedContentHandler.cpp" />
+    <ClCompile Include="Core\GUIControl.cpp" />
+    <ClCompile Include="Core\GUIController.cpp" />
+    <ClCompile Include="Core\GUIMenu.cpp" />
+    <ClCompile Include="Reflection\ClassProperty.cpp" />
+    <ClCompile Include="Reflection\DataConversions.cpp" />
+    <ClCompile Include="Reflection\GenericClass.cpp" />
+    <ClCompile Include="Reflection\PropertyStruct.cpp" />
+    <ClCompile Include="Reflection\PropertyValue.cpp" />
+    <ClCompile Include="Reflection\Struct.cpp" />
+    <ClCompile Include="Reflection\StructProperty.cpp" />
+    <ClCompile Include="Animation\AnimationController.cpp" />
+    <ClCompile Include="Animation\AnimationDesc.cpp" />
+    <ClCompile Include="Animation\AnimationInstance.cpp" />
+    <ClCompile Include="Animation\AnimationTable.cpp" />
+    <ClCompile Include="Animation\AnimationTrigger.cpp" />
+    <ClCompile Include="Animation\Bone.cpp" />
+    <ClCompile Include="Animation\Skeleton.cpp" />
+    <ClCompile Include="Collision\AABBCollisionPrimitive.cpp" />
+    <ClCompile Include="Collision\AABBTree.cpp" />
+    <ClCompile Include="Collision\CollisionList.cpp" />
+    <ClCompile Include="Collision\CollisionSystems.cpp" />
+    <ClCompile Include="Collision\CollisonUtil.cpp" />
+    <ClCompile Include="Collision\colmath.cpp" />
+    <ClCompile Include="Collision\GeoBuilder.cpp" />
+    <ClCompile Include="Collision\OBBCollisionPrimitive.cpp" />
+    <ClCompile Include="Collision\PhysicsObject.cpp" />
+    <ClCompile Include="Collision\PhysicsObjectProxy.cpp" />
+    <ClCompile Include="Collision\PhysicsWorld.cpp" />
+    <ClCompile Include="Collision\RayCollider.cpp" />
+    <ClCompile Include="Collision\SphereCollisionPrimitive.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\atomic_ref.h" />
+    <ClInclude Include="Core\RenderList.h" />
+    <ClInclude Include="Core\SlotIndex.h" />
+    <ClInclude Include="Core\VisualComponent.h" />
+    <ClInclude Include="Gameplay\AssetStreamEntityComponent.h" />
+    <ClInclude Include="Gameplay\Bot.h" />
+    <ClInclude Include="Gameplay\CharacterTemplate.h" />
+    <ClInclude Include="Gameplay\DamageTypes.h" />
+    <ClInclude Include="Gameplay\GameplayClasses.h" />
+    <ClInclude Include="Gameplay\HitInfo.h" />
+    <ClInclude Include="Gameplay\MBot.h" />
+    <ClInclude Include="Gameplay\MTActorComponent.h" />
+    <ClInclude Include="Gameplay\PathFinder.h" />
+    <ClInclude Include="Gameplay\PhysicsEntityComponent.h" />
+    <ClInclude Include="Gameplay\Projectile.h" />
+    <ClInclude Include="Gameplay\ProjectileTrigger.h" />
+    <ClInclude Include="Gameplay\SpawnPoint.h" />
+    <ClInclude Include="Gameplay\Waypoint.h" />
+    <ClInclude Include="Gameplay\WCharacter.h" />
+    <ClInclude Include="Gameplay\WController.h" />
+    <ClInclude Include="Gameplay\WPlayerController.h" />
+    <ClInclude Include="Math\AxisAngle.h" />
+    <ClInclude Include="Math\BulletMathUtil.h" />
+    <ClInclude Include="Math\EulerAngle.h" />
+    <ClInclude Include="Math\GodzMath.h" />
+    <ClInclude Include="Math\IntersectionAxis.h" />
+    <ClInclude Include="Math\EulerAngleConverter.h" />
+    <ClInclude Include="Math\NumberRange.h" />
+    <ClInclude Include="Math\OBBox.h" />
+    <ClInclude Include="Math\ProjectionMatrixInfo.h" />
+    <ClInclude Include="Math\Quaternion.h" />
+    <ClInclude Include="Math\Rect2.h" />
+    <ClInclude Include="Math\Vector2.h" />
+    <ClInclude Include="Math\Vector3.h" />
+    <ClInclude Include="Math\Vector4.h" />
+    <ClInclude Include="Math\vectormath.h" />
+    <ClInclude Include="Math\ViewFrustum.h" />
+    <ClInclude Include="Math\ViewMatrixInfo.h" />
+    <ClInclude Include="Math\WBox.h" />
+    <ClInclude Include="Math\WGeometry.h" />
+    <ClInclude Include="Math\WMatrix.h" />
+    <ClInclude Include="Math\WMatrix3.h" />
+    <ClInclude Include="Math\WMatrixUtil.h" />
+    <ClInclude Include="Math\WPlane.h" />
+    <ClInclude Include="Math\WRay.h" />
+    <ClInclude Include="Math\WSphere.h" />
+    <ClInclude Include="HUD\HUD.h" />
+    <ClInclude Include="HUD\ICanvas.h" />
+    <ClInclude Include="HUD\Widget.h" />
+    <ClInclude Include="HUD\WidgetInfo.h" />
+    <ClInclude Include="ozlib\dist_pointline.h" />
+    <ClInclude Include="ozlib\intr_lineline.h" />
+    <ClInclude Include="ozlib\intr_sphereline.h" />
+    <ClInclude Include="ozlib\intr_spheretri.h" />
+    <ClInclude Include="ozlib\intr_tripoint.h" />
+    <ClInclude Include="ozlib\plane.h" />
+    <ClInclude Include="ozlib\sphere.h" />
+    <ClInclude Include="ozlib\vec2f.h" />
+    <ClInclude Include="ozlib\vec3f.h" />
+    <ClInclude Include="Graphics\DebugRenderer.h" />
+    <ClInclude Include="Graphics\DeferredRenderManager.h" />
+    <ClInclude Include="Graphics\GpuEvent.h" />
+    <ClInclude Include="Graphics\RendererHelper.h" />
+    <ClInclude Include="PlayerSkills\PlayerSkill_Body.h" />
+    <ClInclude Include="PlayerSkills\SkillDatabase.h" />
+    <ClInclude Include="Core\BlurManager.h" />
+    <ClInclude Include="Core\BoneSystem.h" />
+    <ClInclude Include="Core\ClassRegistry.h" />
+    <ClInclude Include="Core\Color4f.h" />
+    <ClInclude Include="Core\CoreClasses.h" />
+    <ClInclude Include="Core\CoreFramework.h" />
+    <ClInclude Include="Core\crc32.h" />
+    <ClInclude Include="Core\debug.h" />
+    <ClInclude Include="Core\DeviceCreation.h" />
+    <ClInclude Include="Core\EditorEvents.h" />
+    <ClInclude Include="Core\FPSCounter.h" />
+    <ClInclude Include="Core\GDZArchive.h" />
+    <ClInclude Include="Core\GenericNode.h" />
+    <ClInclude Include="Core\GenericObjData.h" />
+    <ClInclude Include="Core\GenericObject.h" />
+    <ClInclude Include="Core\GenericObjectList.h" />
+    <ClInclude Include="Core\GenericPackage.h" />
+    <ClInclude Include="Core\GenericReferenceCounter.h" />
+    <ClInclude Include="Core\GenericSingleton.h" />
+    <ClInclude Include="Core\GeometryInfo.h" />
+    <ClInclude Include="Core\GizmoAxis.h" />
+    <ClInclude Include="Core\Godz.h" />
+    <ClInclude Include="Core\GodzAssert.h" />
+    <ClInclude Include="Core\GodzAtomics.h" />
+    <ClInclude Include="Core\GodzEngine.h" />
+    <ClInclude Include="Core\GodzExports.h" />
+    <ClInclude Include="Core\GodzMutex.h" />
+    <ClInclude Include="Core\GodzUtil.h" />
+    <ClInclude Include="Core\GodzVector.h" />
+    <ClInclude Include="Core\GSAFileImporter.h" />
+    <ClInclude Include="Core\HDRManager.h" />
+    <ClInclude Include="Core\HeapUnit.h" />
+    <ClInclude Include="Core\HString.h" />
+    <ClInclude Include="Core\HStringTable.h" />
+    <ClInclude Include="Core\IAnimNotify.h" />
+    <ClInclude Include="Core\ICollisionCallback.h" />
+    <ClInclude Include="Core\IDriver.h" />
+    <ClInclude Include="Core\IGenericConfig.h" />
+    <ClInclude Include="Core\InputSystem.h" />
+    <ClInclude Include="Core\Inventory.h" />
+    <ClInclude Include="Core\IWindow.h" />
+    <ClInclude Include="Core\Job.h" />
+    <ClInclude Include="Core\JobManager.h" />
+    <ClInclude Include="Core\JobThread.h" />
+    <ClInclude Include="Core\Layer.h" />
+    <ClInclude Include="Core\LevelNode.h" />
+    <ClInclude Include="Core\Lightmap.h" />
+    <ClInclude Include="Core\Logger.h" />
+    <ClInclude Include="Core\Material.h" />
+    <ClInclude Include="Core\MaterialInfo.h" />
+    <ClInclude Include="Core\MemoryMngr.h" />
+    <ClInclude Include="Core\Mesh.h" />
+    <ClInclude Include="Core\MeshImporter.h" />
+    <ClInclude Include="Core\MeshInstance.h" />
+    <ClInclude Include="Core\mmgr.h" />
+    <ClInclude Include="Core\ModelResource.h" />
+    <ClInclude Include="Core\NavigationMesh.h" />
+    <ClInclude Include="Core\NavMeshInfo.h" />
+    <ClInclude Include="Core\ObjectStateChangeEvent.h" />
+    <ClInclude Include="Core\OctreeSceneNode.h" />
+    <ClInclude Include="Core\PackageList.h" />
+    <ClInclude Include="Core\PerformanceTracker.h" />
+    <ClInclude Include="Core\PlayerSkill.h" />
+    <ClInclude Include="Core\PropertyNames.h" />
+    <ClInclude Include="Core\RenderData.h" />
+    <ClInclude Include="Core\RenderDeviceBox.h" />
+    <ClInclude Include="Core\RenderDeviceEvent.h" />
+    <ClInclude Include="Core\RenderDeviceObject.h" />
+    <ClInclude Include="Core\Renderer.h" />
+    <ClInclude Include="Core\RenderOptions.h" />
+    <ClInclude Include="Core\RenderQueue.h" />
+    <ClInclude Include="Core\ResourceFactory.h" />
+    <ClInclude Include="Core\ResourceManager.h" />
+    <ClInclude Include="Core\ResourceObject.h" />
+    <ClInclude Include="Core\RString.h" />
+    <ClInclude Include="Core\SceneData.h" />
+    <ClInclude Include="Core\SceneElement.h" />
+    <ClInclude Include="Core\SceneInfo.h" />
+    <ClInclude Include="Core\SceneLight.h" />
+    <ClInclude Include="Core\SceneManager.h" />
+    <ClInclude Include="Core\SceneNode.h" />
+    <ClInclude Include="Core\ScreenDimension.h" />
+    <ClInclude Include="Core\ShaderLoader.h" />
+    <ClInclude Include="Core\ShaderManager.h" />
+    <ClInclude Include="Core\ShaderResource.h" />
+    <ClInclude Include="Core\ShaderTechniqueList.h" />
+    <ClInclude Include="Core\ShadowMapManager.h" />
+    <ClInclude Include="Core\SkeletalMesh.h" />
+    <ClInclude Include="Core\SkelMeshInstance.h" />
+    <ClInclude Include="Core\Sort.h" />
+    <ClInclude Include="Core\StringBuffer.h" />
+    <ClInclude Include="Core\StringTokenizer.h" />
+    <ClInclude Include="Core\TextureInfo.h" />
+    <ClInclude Include="Core\TextureResource.h" />
+    <ClInclude Include="Core\Timer.h" />
+    <ClInclude Include="Core\TriangleList.h" />
+    <ClInclude Include="Core\VertexTypes.h" />
+    <ClInclude Include="Core\ViewportEvents.h" />
+    <ClInclude Include="Core\ViewportInterface.h" />
+    <ClInclude Include="Core\Win32Interface.h" />
+    <ClInclude Include="Core\WindowManager.h" />
+    <ClInclude Include="Core\CameraInfo.h" />
+    <ClInclude Include="Core\EntityComponent.h" />
+    <ClInclude Include="Core\EntityEvents.h" />
+    <ClInclude Include="Core\EntityPass.h" />
+    <ClInclude Include="Core\EntityTemplate.h" />
+    <ClInclude Include="Core\MActor.h" />
+    <ClInclude Include="Core\ObjectTemplate.h" />
+    <ClInclude Include="Core\SkyDome.h" />
+    <ClInclude Include="Core\WCamera.h" />
+    <ClInclude Include="Core\WDynamicLight.h" />
+    <ClInclude Include="Core\WEntity.h" />
+    <ClInclude Include="Core\WPhysicsVolume.h" />
+    <ClInclude Include="Core\WPointLight.h" />
+    <ClInclude Include="Core\WShadowPointLight.h" />
+    <ClInclude Include="Core\WShadowSpotLight.h" />
+    <ClInclude Include="Core\WSkyDome.h" />
+    <ClInclude Include="Core\WSpotLight.h" />
+    <ClInclude Include="Core\WSunLight.h" />
+    <ClInclude Include="Core\AsyncFileLoader.h" />
+    <ClInclude Include="Core\AsyncFileObserver.h" />
+    <ClInclude Include="Core\FileReader.h" />
+    <ClInclude Include="Core\FileWriter.h" />
+    <ClInclude Include="Core\IReader.h" />
+    <ClInclude Include="Core\IWriter.h" />
+    <ClInclude Include="Core\Name.h" />
+    <ClInclude Include="Core\NameTable.h" />
+    <ClInclude Include="Core\PackageReader.h" />
+    <ClInclude Include="Core\PackageWriter.h" />
+    <ClInclude Include="Core\SerializedContentHandler.h" />
+    <ClInclude Include="Core\GUIControl.h" />
+    <ClInclude Include="Core\GUIController.h" />
+    <ClInclude Include="Core\GUIMenu.h" />
+    <ClInclude Include="Reflection\ClassProperty.h" />
+    <ClInclude Include="Reflection\DataConversions.h" />
+    <ClInclude Include="Reflection\GenericClass.h" />
+    <ClInclude Include="Reflection\PropertyConvertReference.h" />
+    <ClInclude Include="Reflection\PropertyFactory.h" />
+    <ClInclude Include="Reflection\PropertyStruct.h" />
+    <ClInclude Include="Reflection\PropertyValue.h" />
+    <ClInclude Include="Reflection\Struct.h" />
+    <ClInclude Include="Reflection\StructData.h" />
+    <ClInclude Include="Reflection\StructProperty.h" />
+    <ClInclude Include="Animation\AnimationController.h" />
+    <ClInclude Include="Animation\AnimationDesc.h" />
+    <ClInclude Include="Animation\AnimationInstance.h" />
+    <ClInclude Include="Animation\AnimationTable.h" />
+    <ClInclude Include="Animation\AnimationTrigger.h" />
+    <ClInclude Include="Animation\Bone.h" />
+    <ClInclude Include="Animation\Skeleton.h" />
+    <ClInclude Include="Animation\SkeletonNode.h" />
+    <ClInclude Include="Collision\AABBCollisionPrimitive.h" />
+    <ClInclude Include="Collision\AABBTree.h" />
+    <ClInclude Include="Collision\CollisionList.h" />
+    <ClInclude Include="Collision\CollisionPrimitive.h" />
+    <ClInclude Include="Collision\CollisionResult.h" />
+    <ClInclude Include="Collision\CollisionSystems.h" />
+    <ClInclude Include="Collision\CollisionUtil.h" />
+    <ClInclude Include="Collision\colmath.h" />
+    <ClInclude Include="Collision\GeoBuilder.h" />
+    <ClInclude Include="Collision\ICollisionCallback.h" />
+    <ClInclude Include="Collision\OBBCollisionPrimitive.h" />
+    <ClInclude Include="Collision\Physics.h" />
+    <ClInclude Include="Collision\PhysicsObject.h" />
+    <ClInclude Include="Collision\PhysicsObjectProxy.h" />
+    <ClInclude Include="Collision\PhysicsWorld.h" />
+    <ClInclude Include="Collision\RayCollider.h" />
+    <ClInclude Include="Collision\SphereCollisionPrimitive.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Axialis_Sphere.ico" />
+    <Image Include="BoxDemo.ico" />
+    <Image Include="icon2.ico" />
+    <Image Include="ModeRotate.bmp" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bullet\BulletCollision.vcxproj">
+      <Project>{c0e1329c-3d6f-492d-8eff-08069f096c6e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Bullet\LinearMath.vcxproj">
+      <Project>{519f115f-f196-49fe-9b24-49618a6202bb}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

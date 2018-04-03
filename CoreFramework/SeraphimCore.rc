@@ -1,0 +1,422 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_BOXDEMO             ICON                    "BoxDemo.ico"
+IDI_SMALL               ICON                    "small.ico"
+IDI_ENTITY              ICON                    "Axialis_Sphere.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "New...",                      ID_NEW_MAP
+        POPUP "Import"
+        BEGIN
+            MENUITEM ".ASE",                        ID_IMPORT_ASE_LEVEL
+            MENUITEM ".T3D",                        ID_IMPORT_T3D
+        END
+        MENUITEM "Open",                        ID_FILE_LOAD
+        MENUITEM SEPARATOR
+        MENUITEM "Save...",                     ID_SAVE
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+    POPUP "Render States"
+    BEGIN
+        POPUP "Fill Mode"
+        BEGIN
+            MENUITEM "Wireframe",                   ID_FILL_WIREFRAME
+        END
+    END
+    POPUP "Draw"
+    BEGIN
+        POPUP "Collision"
+        BEGIN
+            MENUITEM "Entity",                      ID_COLLISION_ENTITY
+            MENUITEM "Static Meshes",               ID_COLLISION_AABBTREE
+            MENUITEM "Scene Nodes",                 ID_COLLISION_SPATIALNODE
+            MENUITEM "Bones",                       ID_COLLISION_BONES
+        END
+        POPUP "Stats"
+        BEGIN
+            MENUITEM "FPS",                         ID_STATS_FPS
+        END
+        POPUP "Effects"
+        BEGIN
+            MENUITEM "Normals",                     ID_EFFECTS_NORMALS
+        END
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "Class Browser",               ID_VIEW_CLASSBROWSER
+        MENUITEM "Mesh Browser",                ID_MESH_VIEW
+        MENUITEM "Character Browser",           ID_VIEW_CHARACTERBROWSER
+        MENUITEM "Material Browser",            ID_VIEW_MATERIALBROWSER
+    END
+END
+
+IDR_MENU4 MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        POPUP "Import"
+        BEGIN
+            MENUITEM "Direct X",                    ID_IMPORT_X
+            MENUITEM "ASE",                         ID_IMPORT_ASE
+            MENUITEM "GSA",                         ID_IMPORT_GSA
+        END
+        MENUITEM "Load",                        138
+        MENUITEM "Save...",                     ID_MESH_SAVE
+    END
+END
+
+IDR_MENU5 MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Open",                        ID_FILE_OPEN40003
+        POPUP "Import Character"
+        BEGIN
+            MENUITEM "GSA",                         ID_IMPORT_GSA
+        END
+        MENUITEM "Add Animation",               ID_FILE_ADDANIMATION, GRAYED
+        MENUITEM "Save",                        ID_FILE_SAVE40006
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "Bones",                       ID_VIEW_BONES
+    END
+END
+
+IDR_MENU6 MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Open",                        ID_FILE_OPEN_MAT_VIEW
+        MENUITEM "Import",                      ID_FILE_IMPORT_IMG
+        MENUITEM "Save",                        ID_FILE_SAVE_MAT_VIEW
+        MENUITEM "New Package",                 40025
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SceneViewDlg DIALOGEX 0, 0, 186, 135
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Class Tree"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_CLASSTREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_TABSTOP,7,7,172,121
+END
+
+IDD_PROP_ED_DLG DIALOGEX 0, 0, 285, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Property Editor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_NOLABELWRAP | LVS_EDITLABELS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,271,152
+END
+
+IDD_MESH_DLG DIALOGEX 0, 0, 396, 258
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "Mesh Browser"
+MENU IDR_MENU4
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_MESH_BG,"Static",SS_BLACKFRAME | SS_NOTIFY,92,25,197,171
+    CONTROL         "",IDC_MESH_LIST,"SysListView32",LVS_REPORT | LVS_EDITLABELS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,197,382,54
+    CONTROL         "",IDC_MESH_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_NOSCROLL | WS_BORDER | WS_TABSTOP,7,25,86,172
+    COMBOBOX        IDC_PACKAGES_COMBO,47,7,165,87,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Packages:",IDC_STATIC,7,7,40,11
+    LTEXT           "Material:",IDC_STATIC,292,25,53,12
+    COMBOBOX        IDC_MESHTEX_COMBO,292,39,95,79,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Edit Material",IDC_EDITTEX_BUTTON,314,55,55,11
+    PUSHBUTTON      "Add FX to Mat",IDC_ADDSHADER_BUTTON,314,105,55,11
+    GROUPBOX        "",IDC_STATIC,289,21,100,176
+    COMBOBOX        IDC_MESHSHADER_COMBO,292,89,96,65,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Shader:",IDC_STATIC,292,76,27,8
+    PUSHBUTTON      "Update Collision",IDC_UPCOLL_BUTTON,313,166,57,10
+    COMBOBOX        IDC_MESHTECH_COMBO,292,136,97,83,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Techniques:",IDC_STATIC,292,126,46,10
+    PUSHBUTTON      "Set Technique",IDC_MESHTECH_BUTTON,313,151,54,11
+    PUSHBUTTON      "Edit Shader Parms",IDC_MESH_EDITPARM_BUTTON,302,183,77,11
+END
+
+IDD_NEW_PACKAGE_DLG DIALOGEX 0, 0, 186, 73
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Mesh Import"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PKG_EDIT,68,15,103,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDCANCEL,45,51,50,14
+    DEFPUSHBUTTON   "OK",IDOK,104,51,50,14
+    LTEXT           "Package Name:",IDC_STATIC,7,17,58,11
+END
+
+IDD_CHARACTER_DIALOG DIALOGEX 0, 0, 476, 387
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Character Browser"
+MENU IDR_MENU5
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Package:",IDC_STATIC,7,7,29,12
+    CONTROL         "",IDC_CHARACTERS_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_NOSCROLL | WS_BORDER | WS_HSCROLL | WS_TABSTOP,7,47,65,333,WS_EX_STATICEDGE
+    CONTROL         "",IDC_STATIC_CHARACTER,"Static",SS_BLACKFRAME | WS_TABSTOP,88,47,308,245
+    LTEXT           "Sequences:",IDC_STATIC,7,32,42,9
+    COMBOBOX        IDC_CHARACTER_PKG_COMBO,45,7,175,52,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CHARACTER_COMBO,239,7,120,114,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SKELPROP_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,73,314,396,66
+    EDITTEXT        IDC_SEQNAME_EDIT,409,60,59,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SEQSPEED_EDIT,409,87,59,13,ES_AUTOHSCROLL
+    LTEXT           "Name:",IDC_STATIC,409,49,59,8
+    LTEXT           "Playback Speed:",IDC_STATIC,409,78,59,9
+    LTEXT           "Category:",IDC_STATIC,409,102,59,8
+    PUSHBUTTON      "Update",IDC_SEQUPDATE_BUTTON,411,130,58,12
+    COMBOBOX        IDC_SEQCOMBO,409,113,59,69,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MATERIAL_COMBO,412,171,57,84,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Edit Material",IDC_MAT_VIEW,411,186,58,12
+    GROUPBOX        "Sequence",IDC_STATIC,400,38,69,111
+    PUSHBUTTON      "Attach FX to Mat",IDC_CHARADDSHADER,409,232,59,12
+    GROUPBOX        " Material",IDC_STATIC,401,157,68,146
+    COMBOBOX        IDC_CHARFX_COMBO,410,216,59,90,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Set Technique",IDC_SHADERTECH_BUTTON,409,274,60,11
+    COMBOBOX        IDC_SHADERTECH_COMBO,413,259,56,59,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Shader",IDC_STATIC,413,205,47,8
+    LTEXT           "FX Techniques",IDC_STATIC,415,251,54,8
+    PUSHBUTTON      "Edit Shader Parms",IDC_EDITSHADEPARAMS_BUTTON,403,289,66,11
+    PUSHBUTTON      "Button2",IDC_BUTTON_MODEL_ROTATE,231,292,23,20,BS_BITMAP
+END
+
+IDD_ASSET_DIALOG DIALOGEX 0, 0, 411, 286
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Material Browser"
+MENU IDR_MENU6
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Package:",IDC_STATIC,7,7,45,10
+    CONTROL         "",IDC_TEX_LIST,"SysListView32",LVS_AUTOARRANGE | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,36,397,243
+    COMBOBOX        IDC_ASSET_COMBO,71,7,217,95,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_MATERIAL_IMPORT DIALOGEX 0, 0, 186, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Material Import"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,63,65,50,14
+    COMBOBOX        IDC_SHADER_COMBO,55,7,124,68,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Material:",IDC_STATIC,7,7,34,12
+    EDITTEXT        IDC_TEX_EDIT,56,22,123,13,ES_AUTOHSCROLL
+    LTEXT           "Package:",IDC_STATIC,7,23,44,12
+    EDITTEXT        IDC_MATIMPORT_EDIT,56,38,123,13,ES_AUTOHSCROLL
+    LTEXT           "Texture:",IDC_STATIC,7,38,34,11
+END
+
+IDD_RESOURCE_LIST_DLG DIALOGEX 0, 0, 310, 217
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Resource Selector"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,142,196,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,77,196,50,14
+    COMBOBOX        IDC_RESOURCELIST_COMBO1,69,7,143,19,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_RESOURCELIST_LIST1,18,34,258,139,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SceneViewDlg, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_PROP_ED_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_MESH_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 389
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_NEW_PACKAGE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 65
+    END
+
+    IDD_CHARACTER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 469
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 380
+    END
+
+    IDD_ASSET_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 404
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+    END
+
+    IDD_MATERIAL_IMPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_RESOURCE_LIST_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Richard Osborne"
+            VALUE "FileDescription", "Godz Engine"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "GodzEngine"
+            VALUE "LegalCopyright", "Copyright (C) 2004"
+            VALUE "OriginalFilename", "GodzEngine.dll"
+            VALUE "ProductName", " GodzEngine Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDC_BUTTON_MODEL_ROTATE BITMAP                  "ModeRotate.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
