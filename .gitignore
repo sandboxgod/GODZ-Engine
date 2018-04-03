@@ -1,2 +1,13 @@
 *.obj
 *.pdb
+*.exe
+*.lib
+*.ilk
+*.dll
+*.exp
+*.log
+*.ipch
+*.tlog
+*.fxo
+*.db
+*.suo
